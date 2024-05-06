@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>许可信息</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">    
+    <link rel="stylesheet" type="text/css" href="./static/mui.css">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <link rel="stylesheet" type="text/css" href="./static/login.css">
+    <link rel="stylesheet" type="text/css" href="./static/mui.css">
+	<link rel="stylesheet" type="text/css" href="./static/mui.picker.css">
+	<link rel="stylesheet" type="text/css" href="./static/mui.poppicker.css">
+    <link rel="stylesheet" type="text/css" href="./static/detail.css">
+	 <style>
+    .tip{
+        border: 1px solid red;
+	    position: fixed;
+	    left: 50%;
+	    top: 30%;
+	    transform: translate(-50%, -50%) rotate(-36deg);
+	    color: red;
+	    padding: 10px 40px;
+	    font-size: 24px;
+    }
+    </style>  
+</head>
+<body>
+	<div class="mui-content hide">
+        <input id="reqNo" value="A2300002024042635462">
+        <input id="trans" value="1">
+    </div> 
+
+	<div class="mui-input-group">
+		<div class="small-title-class">基础信息</div>
+		<div class="mui-input-row " id="rowNo">	
+			<span class="title">许可证号：</span><span id="xkNo">A2300002024042635462【2类件】</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">有效范围：</span><span id="pass_dist_name">黑龙江,吉林,辽宁,河北,天津,河南,湖北,江西,广东</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">通行时间：</span><span id="pass_date">2024-04-28 18:17 至 2024-05-19 23:59</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">通行次数：</span><span id="txcs">单次</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">通行路线：</span>
+			<div id="route-list">黑龙江:哈尔滨南收费站---G1京哈高速--黑吉界;<br>吉林:吉黑界一 G1京哈高速一G2501长春绕城高速(一汽方向)-G1京哈高速--吉辽界:<br>辽宁:辽吉界--G1京哈高速一S17平康高速一G25长深高速(节假日不通行)--辽冀界;<br>河北:冀辽界---G25长深高速----冀津界---冀津界---G0211津石高速一-G45大广高速---冀豫界:<br>天津:津冀界--G25长深高速(长深高速滨海大桥严禁主桥行驶，注意分流标志)-G0211津石高速---津冀界;<br>河南:豫冀界---G45大广高速(节假日不通行)--豫鄂界:<br>湖北:鄂豫界---G45大广高速(节假日不通行)--鄂赣界:<br>江西:赣鄂界---G45人广高速(节假日不通行)--赣粤界;<br>广东:粤赣界----G45大广高速-G0422武深高速-S2广河高速-G35济广高速-G25长深高速-S12梅龙高速-大埔收费站-G235---广东电网能源有限公司</div>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">承运单位：</span><span id="applicantName">齐齐哈尔众鹏运输有限公司</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">经营许可证号：</span><span id="orgCertNo">黑交运管许可齐字230231006788号</span>
+		</div>
+		<div class="mui-input-row " id="orgCertDate">	
+			<span class="title">经营许可有效期：</span><span id="orgCert_date">2020-06-29 至 2024-06-29</span>
+		</div>
+		
+		
+		<div class="small-title-class">货物信息</div>
+		<div class="mui-input-row ">	
+			<span class="title">货物名称：</span><span id="cargo_name">锅炉设备</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">货物重量：</span><span id="cargo_weight">66.130吨</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">货物外廓尺寸(米)：</span><span id="cargo_out">15.00x3.75x3.10</span>
+		</div>
+		
+		<div class="small-title-class">车辆信息</div>
+		<div id="main_vehicle_div"><div class="mui-input-row "><span class="title">牵引车牌号：</span><span>黑B44829</span></div><div class="mui-input-row "><span class="title">厂牌型号：</span><span>解放牌CA4250P66K24T1A1</span></div><div class="mui-input-row "><span class="title">整备质量：</span><span>8.805吨</span></div></div>
+		
+		<div id="hang_vehicle_div"><div class="mui-input-row "><span class="title">挂车牌号：</span><span>黑AR644超</span></div><div class="mui-input-row "><span class="title">厂牌型号：</span><span>辰陆牌</span></div><div class="mui-input-row "><span class="title">整备质量：</span><span>15.000吨</span></div></div>
+		
+		<div class="small-title-class">车货总体信息</div>
+		<div class="mui-input-row ">	
+			<span class="title">车货总重量：</span><span id="total_weight">90.000吨</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">车货外廓尺寸(米)：</span><span id="total_out">26.00x3.75x4.50</span>
+		</div>
+		<div class="mui-input-row ">	
+			<span class="title">轴荷分布：</span><span id="axles_load">10+20+60</span>
+		</div>
+		<div class="mui-input-row " id="total_img">	
+			<span class="title">车货总体轮廓图：</span>
+			<div id="total_image" class="total-image-class imgtop">无</div>
+		</div>
+		
+		<div class="small-title-class" id="other_img">其他信息</div>
+		<div class="mui-input-row" id="trans_plan_img">	
+			<span class="title">运输计划：</span>
+			<div id="trans_plan_image" class="total-image-class imgtop">无</div>
+		</div>
+		
+		<div class="mui-input-row" id="plan_img">	
+			<span class="title">护送方案：</span>
+			<div id="plan_image" class="total-image-class imgtop">无</div>
+		</div>
+		
+	</div>
+	
+    <div id="tip" class="tip"><span id="tipMsg">当前有效</span></div>
+
+</body></html>
