@@ -1,106 +1,260 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<title>许可信息</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">    
-    <link rel="stylesheet" type="text/css" href="./static/mui.css">
-    <link rel="stylesheet" type="text/css" href="./static/style.css">
-    <link rel="stylesheet" type="text/css" href="./static/login.css">
-    <link rel="stylesheet" type="text/css" href="./static/mui.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./static/mui.css">
+	<link rel="stylesheet" type="text/css" href="./static/style.css">
+	<link rel="stylesheet" type="text/css" href="./static/login.css">
+	<link rel="stylesheet" type="text/css" href="./static/mui.css">
 	<link rel="stylesheet" type="text/css" href="./static/mui.picker.css">
 	<link rel="stylesheet" type="text/css" href="./static/mui.poppicker.css">
-    <link rel="stylesheet" type="text/css" href="./static/detail.css">
-	 <style>
-    .tip{
-        border: 1px solid red;
-	    position: fixed;
-	    left: 50%;
-	    top: 30%;
-	    transform: translate(-50%, -50%) rotate(-36deg);
-	    color: red;
-	    padding: 10px 40px;
-	    font-size: 24px;
-    }
-    </style>  
+	<link rel="stylesheet" type="text/css" href="./static/detail.css">
+	<style>
+		.tip {
+			border: 1px solid red;
+			position: fixed;
+			left: 50%;
+			top: 30%;
+			transform: translate(-50%, -50%) rotate(-36deg);
+			color: red;
+			padding: 10px 40px;
+			font-size: 24px;
+		}
+	</style>
 </head>
+
 <body>
 	<div class="mui-content hide">
-        <input id="reqNo" value="A2300002024042635462">
-        <input id="trans" value="1">
-    </div> 
+		<input id="reqNo" value="A2300002024042635462">
+		<input id="trans" value="1">
+	</div>
 
 	<div class="mui-input-group">
-		<div class="small-title-class">基础信息</div>
-		<div class="mui-input-row " id="rowNo">	
-			<span class="title">许可证号：</span><span id="xkNo">A2300002024042635462【2类件】</span>
+		<div class="small-title-class">
+			基础信息
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">有效范围：</span><span id="pass_dist_name">湖南，湖北，河南，河北，内蒙古</span>
+		<div class="mui-input-row " id="rowNo">
+			<span class="title">
+				许可证号：
+			</span>
+			<span id="xkNo">
+				A2300002024042635462【2类件】
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">通行时间：</span><span id="pass_date">2024-04-28 18:17 至 2024-05-19 23:59</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				有效范围：
+			</span>
+			<span id="pass_dist_name">
+				湖南，湖北，河南，河北，内蒙古
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">通行次数：</span><span id="txcs">单次</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				通行时间：
+			</span>
+			<span id="pass_date">
+				2024-04-28 18:17 至 2024-05-19 23:59
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">通行路线：</span><div id="route-list">湖南：金洲收费站--金洲收费站--G5513长张高速--G0421许广高速-- 湘鄂界；<br>湖北：鄂湘界--G0421许广高速--鄂豫界；<br>河南：豫鄂界- -G0421许广高速--G4京港澳高速--豫冀界；<br>河北：冀豫界--G4京港澳高速-G18荣乌高速-S10张石高速-张家口西收费站--G110--G207--S244--半拉山收费站-G5516-G1013海张高速--冀蒙界；<br>内蒙古： 蒙冀界-G1013海张高速-锡林浩特收费站--锡海线--S101--G331--G302--G331--满洲里</div>
+		<div class="mui-input-row ">
+			<span class="title">
+				通行次数：
+			</span>
+			<span id="txcs">
+				单次
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">承运单位：</span><span id="applicantName">拜泉县纵横运输有限公司</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				通行路线：
+			</span>
+			<div id="route-list">
+				湖南：金洲收费站--金洲收费站--G5513长张高速--G0421许广高速-- 湘鄂界；<br>
+				湖北：鄂湘界--G0421许广高速--鄂豫界；<br>
+				河南：豫鄂界--G0421许广高速--G4京港澳高速--豫冀界；<br>
+				河北：冀豫界--G4京港澳高速-G18荣乌高速-S10张石高速-张家口西收费站--G110--G207--S244--半拉山收费站-G5516-G1013海张高速--冀蒙界；<br>
+				内蒙古：蒙冀界-G1013海张高速-锡林浩特收费站--锡海线--S101--G331--G302--G331--满洲里
+			</div>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">经营许可证号：</span><span id="orgCertNo">黑交运管许可齐字230231006788号</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				承运单位：
+			</span>
+			<span id="applicantName">
+				拜泉县纵横运输有限公司
+			</span>
 		</div>
-		<div class="mui-input-row " id="orgCertDate">	
-			<span class="title">经营许可有效期：</span><span id="orgCert_date">2020-06-29 至 2024-06-29</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				经营许可证号：
+			</span>
+			<span id="orgCertNo">
+				黑交运管许可齐字230231006788号
+			</span>
 		</div>
-		
-		
-		<div class="small-title-class">货物信息</div>
-		<div class="mui-input-row ">	
-			<span class="title">货物名称：</span><span id="cargo_name">越野吊</span>
+		<div class="mui-input-row " id="orgCertDate">
+			<span class="title">
+				经营许可有效期：
+			</span>
+			<span id="orgCert_date">
+				2020-06-29 至 2024-06-29
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">货物重量：</span><span id="cargo_weight">77.550吨</span>
+		<div class="small-title-class">
+			货物信息
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">货物外廓尺寸(米)：</span><span id="cargo_out">15.00x3.75x3.10</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				货物名称：
+			</span>
+			<span id="cargo_name">
+				越野吊
+			</span>
 		</div>
-		
-		<div class="small-title-class">车辆信息</div>
-		<div id="main_vehicle_div"><div class="mui-input-row "><span class="title">牵引车牌号：</span><span>黑BY6738</span></div><div class="mui-input-row "><span class="title">厂牌型号：</span><span>解放牌CA4250P66K24T1A1</span></div><div class="mui-input-row "><span class="title">整备质量：</span><span>8.805吨</span></div></div>
-		
-		<div id="hang_vehicle_div"><div class="mui-input-row "><span class="title">挂车牌号：</span><span>黑BCK78挂</span></div><div class="mui-input-row "><span class="title">厂牌型号：</span><span>辰陆牌</span></div><div class="mui-input-row "><span class="title">整备质量：</span><span>6.450吨</span></div></div>
-		
-		<div class="small-title-class">车货总体信息</div>
-		<div class="mui-input-row ">	
-			<span class="title">车货总重量：</span><span id="total_weight">84.000吨</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				货物重量：
+			</span>
+			<span id="cargo_weight">
+				77.550吨
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">车货外廓尺寸(米)：</span><span id="total_out">26.00x3.75x4.50</span>
+		<div class="mui-input-row ">
+			<span class="title">
+				货物外廓尺寸(米)：
+			</span>
+			<span id="cargo_out">
+				15.00x3.75x3.10
+			</span>
 		</div>
-		<div class="mui-input-row ">	
-			<span class="title">轴荷分布：</span><span id="axles_load">10+20+3*18</span>
-		</div>
-		<div class="mui-input-row " id="total_img">	
-			<span class="title">车货总体轮廓图：</span>
-			<div id="total_image" class="total-image-class imgtop">无</div>
-		</div>
-		
-		<div class="small-title-class" id="other_img">其他信息</div>
-		<div class="mui-input-row" id="trans_plan_img">	
-			<span class="title">运输计划：</span>
-			<div id="trans_plan_image" class="total-image-class imgtop">无</div>
-		</div>
-		
-		<div class="mui-input-row" id="plan_img">	
-			<span class="title">护送方案：</span>
-			<div id="plan_image" class="total-image-class imgtop">无</div>
-		</div>
-		
-	</div>
-	
-    <div id="tip" class="tip"><span id="tipMsg">当前有效</span></div>
 
-</body></html>
+		<div class="small-title-class">
+			车辆信息
+		</div>
+		<div id="main_vehicle_div">
+			<div class="mui-input-row ">
+				<span class="title">
+					牵引车牌号：
+				</span>
+				<span>
+					黑BY6738
+				</span>
+			</div>
+			<div class="mui-input-row ">
+				<span class="title">
+					厂牌型号：
+				</span>
+				<span>
+					解放牌CA4250P66K24T1A1
+				</span>
+			</div>
+			<div class="mui-input-row ">
+				<span class="title">
+					整备质量：
+				</span>
+				<span>
+					8.805吨
+				</span>
+			</div>
+		</div>
+
+		<div id="hang_vehicle_div">
+			<div class="mui-input-row ">
+				<span class="title">
+					挂车牌号：
+				</span>
+				<span>
+					黑BCK78挂
+				</span>
+			</div>
+			<div class="mui-input-row ">
+				<span class="title">
+					厂牌型号：
+				</span>
+				<span>
+					辰陆牌
+				</span>
+			</div>
+			<div class="mui-input-row ">
+				<span class="title">
+					整备质量：
+				</span>
+				<span>
+					6.450吨
+				</span>
+			</div>
+		</div>
+
+		<div class="small-title-class">
+			车货总体信息
+		</div>
+		<div class="mui-input-row ">
+			<span class="title">
+				车货总重量：
+			</span>
+			<span id="total_weight">
+				84.000吨
+			</span>
+		</div>
+		<div class="mui-input-row ">
+			<span class="title">
+				车货外廓尺寸(米)：
+			</span>
+			<span id="total_out">
+				26.00x3.75x4.50
+			</span>
+		</div>
+		<div class="mui-input-row ">
+			<span class="title">
+				轴荷分布：
+			</span>
+			<span id="axles_load">
+				10+20+3*18
+			</span>
+		</div>
+		<div class="mui-input-row " id="total_img">
+			<span class="title">
+				车货总体轮廓图：
+			</span>
+			<div id="total_image" class="total-image-class imgtop">
+				无
+			</div>
+		</div>
+
+		<div class="small-title-class" id="other_img">
+			其他信息
+		</div>
+		<div class="mui-input-row" id="trans_plan_img">
+			<span class="title">
+				运输计划：
+			</span>
+			<div id="trans_plan_image" class="total-image-class imgtop">
+				无
+			</div>
+		</div>
+
+		<div class="mui-input-row" id="plan_img">
+			<span class="title">
+				护送方案：
+			</span>
+			<div id="plan_image" class="total-image-class imgtop">
+				无
+			</div>
+		</div>
+
+	</div>
+
+	<div id="tip" class="tip">
+		<span id="tipMsg">
+			当前有效
+		</span>
+	</div>
+
+</body>
+
+</html>
